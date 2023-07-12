@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit';
 
-export class OlaMundo extends LitElement {
+export class Logo extends LitElement {
     static styles = [
         css`
             :host {
@@ -13,4 +13,4 @@ export class OlaMundo extends LitElement {
         return html``;
     }
 }
-customElements.define('ola-mundo', OlaMundo);
+customElements.define('app-logo', Logo);
