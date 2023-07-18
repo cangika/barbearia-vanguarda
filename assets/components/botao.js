@@ -28,6 +28,7 @@ export class Botao extends LitElement {
                 font-style: normal;
                 font-weight: 700;
                 line-height: 140%; /* 22.4px */
+                white-space: nowrap;
 
                 transition: all .2s;
                 cursor: pointer;
