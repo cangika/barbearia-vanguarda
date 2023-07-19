@@ -5,6 +5,9 @@ export class ServiçOsSection extends LitElement {
     static styles = [
         section,
         css`
+        :host {
+            padding: 2rem 0;
+        }
 
             app-bolinhas {
                 width: 270px;
@@ -64,6 +67,9 @@ export class ServiçOsSection extends LitElement {
             .descricao {
                 width: 108px;
                 height: .875rem;
+                text-align: center;
+                font-family: Source Serif Pro;
+
             }
 
             img {
@@ -71,6 +77,8 @@ export class ServiçOsSection extends LitElement {
             }
 
             app-quadro {
+                width: 165px;
+                height: 320px;
                 border-top-left-radius: 0;
                 border-bottom-left-radius: 0;
             }

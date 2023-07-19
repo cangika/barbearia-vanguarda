@@ -7,21 +7,21 @@ export class Botao extends LitElement {
                 display: block;
             }
             button {
-                display: flex;
-                width: 139px;
-                height: 32px;
-                padding: 5px 24px;
-                justify-content: center;
+                width: inherit;
+
+                display: inline-flex;
+                padding: 10px 24px;
+                justify-content: flex-start;
                 align-items: center;
-                gap: 10px;
+                gap: .625rem;
                 border: 0;
 
                 border-radius: 8px;
-                background-color: color-mix(in srgb, white 20%, var(--tom-2, #B38962));
+                background-color: var(--button-background, color-mix(in srgb, white 20%, var(--tom-2, #B38962)));
                 box-shadow: 0px 2px 4px 0px #665E57;
 
                 /* tipografia */
-                color: var(--tom-3, #664E38);
+                color: var(--color, color-mix(in srgb, black 20%, var(--tom-3, #664E38)));
                 text-align: center;
                 font-family: var(--fonte-titulo);
                 font-size: 1rem;
@@ -35,14 +35,22 @@ export class Botao extends LitElement {
             }
             button:hover,
             button:active {
-                background-color: var(--tom-2, #B38962);
+                background-color: color-mix(in srgb, white 15%, var(--button-background, var(--tom-2)));
+                color: var(--tom-1);
+            }
+
+            ::slotted(*) {
+                width: 24px;
+                height: 24px;
+                margin-right: 5px 8px 5px 0;
+
             }
         `
     ];
 
     render() {
         return html`
-        <button><slot>Pressione</slot></button>
+        <button><slot name="icone"></slot> <slot>Pressione</slot></button>
         `;
     }
 }
