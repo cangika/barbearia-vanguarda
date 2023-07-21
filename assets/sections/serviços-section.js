@@ -103,7 +103,7 @@ export class ServiçOsSection extends LitElement {
                     >Social, degradê, surfista, militar, razor part, undercut
                     </app-paragrafo>
                 </article>
-                <app-botao>Ver mais</app-botao>
+                <app-botao><a href="">Ver mais</a></app-botao>
             </aside>
         </section>
         
