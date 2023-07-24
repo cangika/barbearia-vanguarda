@@ -16,6 +16,3 @@ export * from './sections/serviços-section'
 export * from './sections/contato-section'
 export * from './sections/unidades-section'
 export * from './sections/menu-section'
-
-// pages
-export * from './pages/home-page'

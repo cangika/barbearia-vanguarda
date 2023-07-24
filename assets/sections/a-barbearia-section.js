@@ -70,6 +70,10 @@ export class ABarbeariaSection extends LitElement {
             img {
                 width: 100%;
             }
+
+            app-botao {
+                display: var(--display-botao);
+            }
         `
     ];
 
