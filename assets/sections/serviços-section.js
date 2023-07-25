@@ -68,7 +68,8 @@ export class ServiçOsSection extends LitElement {
                 width: 108px;
                 height: .875rem;
                 text-align: center;
-                font-family: Source Serif Pro;
+                font-family: var(--fonte-corpo);
+                font-size: 0.875rem;
 
             }
 
@@ -82,6 +83,41 @@ export class ServiçOsSection extends LitElement {
                 border-top-left-radius: 0;
                 border-bottom-left-radius: 0;
             }
+
+            @media (min-width: 768px) {
+                :host {
+                    padding: 3rem 0;
+                }
+                
+                section {
+                    align-self: center;
+                }
+
+                app-quadro {
+                    width: 265px;
+                    height: 520px;
+                    border-radius: 8px;
+                }
+
+                .titulo {
+                    width: 330px;
+                    font-size: 1.25rem;
+                }
+
+                article app-paragrafo:first-child {
+                font-size: 1.25rem;
+                }
+
+                .descricao {
+                    width: 158px;
+                    font-size: 1.25rem;
+                }
+
+                aside {
+                    padding: 176px 0px 16px 0px;
+                }
+            }
+            
         `
     ];
 
@@ -93,7 +129,7 @@ export class ServiçOsSection extends LitElement {
 
         <section>
             <app-quadro>
-                <img src="servicos-1.jpg" alt="imagem serviços 1" />
+                <img loading="lazy" src="servicos-1.jpg" alt="imagem serviços 1" />
             </app-quadro>
 
             <aside>

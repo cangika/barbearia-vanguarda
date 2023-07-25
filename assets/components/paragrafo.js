@@ -4,7 +4,7 @@ export class Paragrafo extends LitElement {
     static styles = [
         css`
             :host {
-                display: block;
+                display: flex;
                 color: var(--cor-secundaria, #665E57);
                 font-family: var(--fonte-corpo);
                 font-size: 1rem;

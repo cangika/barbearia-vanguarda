@@ -34,12 +34,7 @@ export class ABarbeariaSection extends LitElement {
             app-paragrafo {
                 width: 270px;
 
-                color: var(--cor-secundaria, #665E57);
                 text-align: justify;
-                font-family: var(--titulo-corpo)
-                font-size 1rem;
-                font-style: normal;
-                font-weight: 400;
                 line-height: 140%; /* 22.4px */
                 letter-spacing: -1.28px;
             }
@@ -74,6 +69,45 @@ export class ABarbeariaSection extends LitElement {
             app-botao {
                 display: var(--display-botao);
             }
+
+            @media (min-width: 768px) {
+                app-quadro {
+                    width: 600px;
+                    height: 600px;
+
+                    right: -182px;
+                    top: 200px;
+                }
+               
+                app-bolinhas {
+                    width: 400px;
+                    height: 400px;
+                    
+                    top: 272px;
+                }
+               
+                article {
+                    width: 60%;
+                }
+
+                app-paragrafo {
+                    width: 100%;
+                }
+
+                @media (min-width: 1024px) {
+                app-quadro {
+                    top: 100px;
+                }
+               
+                app-bolinhas {
+                    top: 112px;
+                }
+
+                article {
+                    width: 70%;
+                }
+            }
+            
         `
     ];
 
@@ -82,7 +116,7 @@ export class ABarbeariaSection extends LitElement {
         <app-titulo>A Barbearia</app-titulo>
         <app-bolinhas></app-bolinhas>
         <app-quadro>
-            <img src="a-barbearia.png" alt="image">
+            <img loading="lazy" src="a-barbearia.png" alt="image">
         </app-quadro>
         <article>
             <app-paragrafo>

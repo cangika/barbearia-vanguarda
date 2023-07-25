@@ -12,7 +12,7 @@ export function iniRouter() {
         {
             path: "/a-barbearia",
             component: "a-barbearia-page",
-            action: () => import("./pages/a-barbeatia-page")
+            action: () => import("./pages/a-barbearia-page")
         },
     ])
 

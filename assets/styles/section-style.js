@@ -3,6 +3,7 @@ import { css } from "lit";
 export const section = css`
 :host {
     width: 100%;
+    max-width: 768;
     height: 100svh; /* smallest View Height */
     display: flex;
     box-sizing: border-box;
@@ -24,4 +25,20 @@ a:active {
     color: var(--tom-1);
             }
 
-`
+            @media (min-width: 1024px) {
+                :host {
+                    overflow: visible
+                }
+
+                @media (min-width: 768px) {
+                    :host {
+                        padding: 3rem;
+                    }
+                }
+
+                
+
+}
+`;
+
+
