@@ -1,4 +1,5 @@
 import './assets'
+import { Router } from '@vaadin/router';
 import { iniRouter } from './assets/router';
 
 let navbar;
@@ -17,7 +18,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 export const nav = {
   abrir: function () {
+    navbar.classList.add("escondido");
     dialog.showModal()
+  },
+  rolarPara: function (secao) {
+    Router.go("/");
+    router.ready.then(() => {
+
+      document
+      .querySelector("home-page")
+      .shadowRoot.querySelector(secao)
+      .scrollIntoView();
+
+      this.fechar()
+    });
   },
   fechar: function () {
     dialog.close()
