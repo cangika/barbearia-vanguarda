@@ -72,7 +72,21 @@ export class HeroSections extends LitElement {
                 <app-logo></app-logo>
             </app-titulo>
             <app-quadro>
-                <swiper-container loop="true">
+                <swiper-container 
+                loop="true" 
+                autoplay="true" 
+                disabled-on-interaction="false"
+                speed="5000"
+                effect="coverflow" 
+                simulate-touch="false" 
+                centered-slides="true"
+                slides-per-view="auto" 
+                coverflow-effect-rotate="50" 
+                coverflow-effect-stretch="0" 
+                coverflow-effect-depth="100"
+                coverflow-effect-modifier="1" 
+                coverflow-effect-slide-shadows="true"
+                >
 
                     <swiper-slide>
                     <img loading="lazy" src="slider-1.png" alt="imagem slider 1" />
