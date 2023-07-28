@@ -31,8 +31,12 @@ export class UnidadesSection extends LitElement {
             }
 
             swiper-container {
-                width: 100%;
+                width: 100svw;
                 height: 300px;
+
+                position: relative;
+                left: 50%;
+                transform: translatex(-50%);
             }
 
             swiper-slide {
@@ -57,9 +61,40 @@ export class UnidadesSection extends LitElement {
                     width: 400px;
                     height: 300px;
                 }
+
+                swiper-container {
+                    height: 400px;
+                }
             }
         `
     ];
+
+    firstUpdated() {
+        const swiper = this.renderRoot.querySelector('swiper-container')
+
+        console.log(swiper)
+
+        Object.assign(swiper, {
+            spaceBetween: -75,
+            initialSlide: 1,
+            rewind: true,
+            breakpoints: {
+                768: {
+                    spaceBetween: -275
+                },
+                1024: {
+                    spaceBetween: -575
+                },
+                1368: {
+                    centeredSlide: true,
+                    slidesPerView: 3,
+                    spaceBetween: 0,
+                },
+            }
+        })
+
+        swiper.initialize()
+    }
 
     render() {
         return html`
@@ -67,18 +102,27 @@ export class UnidadesSection extends LitElement {
         Nossa sede, localizada na zona leste de São Paulo, e as demais unidades, estão abertas todos os dias. <br> <br> Confira os horários específicos de cada unidade.
         </app-paragrafo>
         
-        <swiper-container space-between="-60">
+        <swiper-container 
+        init="false"
+        
+        >
             <swiper-slide>
                 <app-mapa></app-mapa>
             </swiper-slide>
             <swiper-slide>
-                <app-mapa></app-mapa>
+                <app-mapa>
+                    <img slot="imagem" loading="lazy" src="mapa-2.jpg" alt="imagem barbearia vanguarda" >
+                </app-mapa>
             </swiper-slide>
             <swiper-slide>
-                <app-mapa></app-mapa>
+                <app-mapa>
+                <img slot="imagem" loading="lazy" src="mapa-3.jpg" alt="imagem barbearia vanguarda" >
+                </app-mapa>
             </swiper-slide>
             <swiper-slide>
-                <app-mapa></app-mapa>
+                <app-mapa>
+                <img slot="imagem" loading="lazy" src="mapa-4.jpg" alt="imagem barbearia vanguarda" >
+                </app-mapa>
             </swiper-slide>
         </swiper-container>
         <app-bolinhas formato="metade"></app-bolinhas>
