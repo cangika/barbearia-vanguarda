@@ -33,6 +33,10 @@ export class ServiçOsSection extends LitElement {
 
             .titulo {
                 width: 270px;
+            } 
+            
+            article app-paragrafo:first-child {
+                font-weight: 600;
             }
 
             section {

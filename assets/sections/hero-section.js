@@ -89,7 +89,7 @@ export class HeroSections extends LitElement {
                 >
 
                     <swiper-slide>
-                    <img loading="lazy" src="slider-1.png" alt="imagem slider 1" />
+                    <img src="slider-1.png" alt="imagem slider 1" />
                     </swiper-slide>
 
                     <swiper-slide>

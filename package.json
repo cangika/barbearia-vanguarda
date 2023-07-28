@@ -6,6 +6,8 @@
 
     "build": "vite build",
 
+    "prepreview": "npm run build",
+
     "preview": "vite preview"
 
   },
