@@ -1,8 +1,10 @@
 import { LitElement, html, css } from 'lit';
+import { animate } from '../styles/animate-style';
 import { section } from '../styles/section-style';
 
 export class ServiçOsSection extends LitElement {
     static styles = [
+        animate,
         section,
         css`
         :host {
@@ -53,6 +55,8 @@ export class ServiçOsSection extends LitElement {
                 justify-content: space-between;
                 align-items: center;
                 align-self: stretch;
+
+                z-index: -10;
             }
 
             article {
@@ -141,12 +145,12 @@ export class ServiçOsSection extends LitElement {
 
     render() {
         return html`
-        <app-paragrafo class="titulo">
+        <app-paragrafo class="titulo animate__animated animate__delay-1s" data-toggle-class="animate__fadeIn">
         Estilo, cuidado e excelência em cada <span>corte</span>.
         </app-paragrafo>
 
         <section>
-            <app-quadro>
+            <app-quadro class="animate__animated" data-toggle-class="animate__fadeInLeft">
                 <swiper-container
                 effect="fade"
                 loop="true"
@@ -168,7 +172,7 @@ export class ServiçOsSection extends LitElement {
                 </swiper-container>
             </app-quadro>
 
-            <aside>
+            <aside class="animate__animated animate__" data-toggle-class="animate__fadeInLeft">
                 <article>
                     <app-paragrafo>Corte</app-paragrafo>
                     <app-paragrafo class="descricao"

@@ -1,4 +1,4 @@
-import{s as e,x as o}from"./index-49beb27f.js";class s extends e{render(){return o`
+import{s as e,x as o}from"./index-8847b35c.js";class s extends e{render(){return o`
          <hero-section></hero-section>
          <a-barbearia-section></a-barbearia-section>
          <serviços-section></serviços-section>
